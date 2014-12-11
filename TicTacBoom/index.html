@@ -18,10 +18,18 @@
 
 	</head>
 
+	<style type="text/css">
+	.row { clear: both; }
+	.cell { float: left; }
+	</style>
+
 
 	<body ng-app="boomApp" ng-controller="boomAppCtlr">
-		<div ng-repeat="box in game.board">
-			{{ box }}
+		<div class='row' ng-repeat="row in game.board">
+			<!-- {{ row }} -->
+ 			<div class='cell' ng-repeat="cell in row">
+				{{ cell.s }}
+			</div>
 		</div>
 
 		
