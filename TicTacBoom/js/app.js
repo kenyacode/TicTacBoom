@@ -4,6 +4,6 @@
 
 (function(){
 
-	angular.module("app", []);
+	var boomApp = angular.module("boomApp", []);
 
 }())

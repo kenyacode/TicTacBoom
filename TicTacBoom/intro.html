@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TTT Youtube</title>
+
+	<script>
+	var c, canvas;
+
+	var turn = 1;
+	var moves = [];
+
+	window.onload = function() {
+		canvas = document.getElementById("canvas");
+		c = canvas.getContext("2d");
+
+		draw();
+	}
+
+	function draw(){
+
+	};
+
+	var bg = new Image();
+	bg.src ="ttt_board.png";
+	var x = new Image();
+	x.src = "ttt_x.png";
+	var o = new Image();
+	o.src = "ttt_o.png";
+
+	windowonclick = function(e) {
+		if(e.pagex < 500 && e.pageY < 500){
+			var cX = Math.floor(e.pageX/(500/3));
+			var cY = Math.floor(e.pageY/(500/3));
+
+			var alreadyClicked = false;
+
+			for(i in moves) {
+				if(moves[i][0] == cx && moves[i][1] == cY) {
+					alreadyClicked = true;
+				}
+			}
+
+			if(alreadyClicked == false) {
+				moves[(moves.length)] = [cX, cY, turn];
+				turn = turn*-1;
+				draw();
+				checkWin();
+			}
+		}
+	}
+
+	function draw() {
+		c.clearRect(0, 0, 500, 500);
+
+		c.drawImage(bg, 0, 0);
+
+		for(i in moves) {
+			if(moves[i][2] == 1) {
+				c.drawImage(0, moves[i][o]*180, moves[i][1]*180)
+			}else{
+				c.drawImage(x, moves[i][0]*180, moves[i][1]*180)
+			}
+		}
+	}
+
+	function checkWin() {
+		for(i in moves) {
+			var winning = false;
+
+			var vert = 0;
+			var horz = 0;
+			var trDiag = 0;
+			var tlDiag = 0;
+				// fix () in each if statement
+			for(n in moves) {
+				if((moves[n][0] == moves[i][0]+1 || moves[n][0] == moves[i][0]-1) && moves[n][1] == moves[i][1])
+					if(moves[n][2] == moves[i][2]){
+						vert++;
+					}
+				}
+
+				if((moves[n][1] == moves[i][1]+1 || moves[n][1] == moves[i][1]-1) && moves[n][1] == moves[i][0])
+					if(moves[n][2] == moves[i][2]){
+						horz++;
+					}
+				}
+				if((moves[n][0] == moves[i][0]-1 && moves[n][1] == moves[i][1]-1) || (moves)
+					if(moves[n][2] == moves[i][2]){
+						trDiag++;
+					}
+				}
+				if((moves[n][0] == moves[i][0]+1 && moves[n][1] == moves[i][1]-1) || (moves)
+					if(moves[n][2] == moves[i][2]){
+						tlDiag++;
+					}
+				}
+			}
+
+			if(vert > 1 || horz > 1 || trDiag > 1 || tlDiag > 1) {
+				alert("You Win!!");
+			
+			}
+		}
+	};
+
+	</script>
+
+
+</head>
+<body>
+	<canvas id="canvas" width="500px" height="500px"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
