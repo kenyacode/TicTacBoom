@@ -14,23 +14,32 @@
  
 		<!-- Step 3.0 -->
 		<script type="text/javascript" src="js/MainController.js"></script>
-
-
+		<!-- Live Reload -->
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</head>
-
-	<style type="text/css">
+	 
+	<style type="text/css">*/
 	.row { clear: both; }
 	.cell { float: left; }
-	</style>
+	</style> 
 
+	<body class="board" ng-app="boomApp" ng-controller="boomAppCtlr">
 
-	<body ng-app="boomApp" ng-controller="boomAppCtlr">
-		<div class='row' ng-repeat="row in game.board">
+		<div id="main-container">
+
+			<div class="row" ng-repeat="row in game.board">
 			<!-- {{ row }} -->
- 			<div class='cell' ng-repeat="cell in row">
-				{{ cell.s }}
+<!-- 	 			<div class='cell' ng-repeat="cell in row">
+					{{ cell.s }}
+				</div> -->
+				{{row.s}}
+
+
+
 			</div>
+
 		</div>
+		
 
 		
  	</body>

@@ -5,11 +5,11 @@ boomAppCtlr = function($scope){
 		//this makes the gameboard
 		var game = {};
 		game.board = [
-			[{s:"X"},{s:" "},{s:" "}],
-			[{s:"X"},{s:"O"},{s:" "}],
-			[{s:"X"},{s:" "},{s:"X"}],
-			// ["x","",""],
-			// ["Y","Y","Y"]
+
+				{s:"X"},{s:"X"},{s:"O"},
+				{s:"X"},{s:"O"},{s:"X"},
+				{s:"X"},{s:"O"},{s:"X"}
+
 			];
 $scope.game = game;
 	};

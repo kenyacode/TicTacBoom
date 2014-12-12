@@ -6,4 +6,7 @@
 
 	var boomApp = angular.module("boomApp", []);
 
+
+
+
 }())
