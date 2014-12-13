@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 	<!-- Step 1 -->
-<html>
+<html ng-app="boomApp">
 	<head>
 		<meta charset="utf-8">
 
 		<title>Tic Tac Boom!</title>
+		
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 		
@@ -25,19 +26,21 @@
 	.cell { float: left; }
 	</style> 
 
-	<body class="board" ng-app="boomApp" ng-controller="boomAppCtlr">
-	<h1>{{greeting}}</h1>
-	<h2>{{joshua}}</h2>
-		<div id="main-container">
+	<body id="gameboard" class="board"  ng-controller="boomAppCtlr">
+		<h1>{{greeting}}</h1>
+		<h2>{{joshua}}</h2>
+			<div id="main-container">
 
-			<div ng-click="cellClick($index)" class="row" ng-repeat="row in game.board track by $index" ng-class="changeColor()">
-				{{row.s}}
-						
+				<div ng-click="cellClick($index)" class="row" ng-repeat="row in game.board track by $index" ng-class="changeColor()">
+					{{row.s}}
+							
+				</div>
+
 			</div>
-
-		</div>
 		<button>Start A Game</button>
 
 		
  	</body>
 </html>
+
+
