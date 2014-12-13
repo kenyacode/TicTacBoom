@@ -16,8 +16,15 @@ boomAppCtlr = function($scope){
 				{s:""},{s:""},{s:""}
 
 			];
-	$scope.cellClick = function() {
-		
+
+	$scope.fillBox = function(obj){
+      var dataValue = obj.srcElement.attributes.data.value;
+      var boxToChange = document.getElementById(dataValue);
+      boxToChange.style.backgroundColor = currentPlayer.color
+
+	}
+	$scope.cellClick = function(i) {
+		game.board[i].s = "x";
 		function cellClick() {
 			changeColor();
 		}
@@ -46,14 +53,8 @@ boomAppCtlr = function($scope){
       	// console.log(switchPlayer());
 	};
 
-	$scope.fillBox = function(obj){
-      var dataValue = obj.srcElement.attributes.data.value;
-      var boxToChange = document.getElementById(dataValue);
-      boxToChange.style.backgroundColor = currentPlayer.color
 
-	}
       currentPlayer = new Player();
-      console.log(currentPlayer)
       switchPlayer();
 
 };
