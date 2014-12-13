@@ -9,6 +9,9 @@ boomAppCtlr = function($scope){
 		var player1 = new Player();
 		var computer = new Computer();
 		var currentPlayer = player1;
+
+		$scope.greeting = "what up my man";		
+		$scope.joshua = "Joshua Mwangi Munene";
 		game.board = [
 
 				{s:""},{s:""},{s:""},

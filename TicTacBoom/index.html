@@ -26,7 +26,8 @@
 	</style> 
 
 	<body class="board" ng-app="boomApp" ng-controller="boomAppCtlr">
-
+	<h1>{{greeting}}</h1>
+	<h2>{{joshua}}</h2>
 		<div id="main-container">
 
 			<div ng-click="cellClick($index)" class="row" ng-repeat="row in game.board track by $index" ng-class="changeColor()">
