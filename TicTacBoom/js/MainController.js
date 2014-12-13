@@ -12,6 +12,7 @@ boomAppCtlr = function($scope){
 
 		$scope.greeting = "what up my man";		
 		$scope.joshua = "Joshua Mwangi Munene";
+
 		game.board = [
 
 				{s:""},{s:""},{s:""},
@@ -61,6 +62,8 @@ boomAppCtlr = function($scope){
       switchPlayer();
 
 };
+
+
 
 angular
 	.module("boomApp", [])

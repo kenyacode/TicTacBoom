@@ -1,0 +1,20 @@
+Run a function play turn {
+	check who
+}
+game.status
+	playing
+	tie - 
+	won - game.winner 
+
+If game.outcome is nil --> game is playing
+if game.outcome is true -> x won
+if game.outcome is false > y won
+
+
+Model an object for game state.
+	One game of ttt
+	object of game board = array
+	array = cells
+	cells = state if played, x, or o
+		if state empty 2 bullions
+			empty or not / x or o
