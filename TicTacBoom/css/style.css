@@ -6,7 +6,7 @@ html{
 }
 
 body {
-	background-image: url("../images/kenyasunset.jpg");
+	background-image: url("../images/background_003.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 100%;
@@ -15,27 +15,25 @@ body {
 }
 
 body div#main-container{	
-	width: 610px;
-	height: 600px;
+	width: 310px;
+	height: 300px;
 	margin: 0 auto;
 
 }
 
 div.row{
-	width: 200px;
-	height: 200px;
-	border: 1px solid black;
+	width: 85px;
+	height: 85px;
+	border: 2px solid black;
+	border-radius: 5px;
 	float: left;
+	padding: 2px;
 
 }
-
-/*.cell {
-	width: 20px;
-}*/
-
-
-/*img[Attributes Style] {
-width: 1200px;
-height: 800px;
+.board-tile.selected-tile {
+	background-color: black;
 }
-*/
+
+.board-tile.unselected-tile {
+	background-color: white;
+}

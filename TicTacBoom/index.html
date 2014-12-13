@@ -14,6 +14,8 @@
  
 		<!-- Step 3.0 -->
 		<script type="text/javascript" src="js/MainController.js"></script>
+		<!-- Player controller -->
+		<script src="js/playerCtlr.js"></script>
 		<!-- Live Reload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</head>
@@ -27,15 +29,19 @@
 
 		<div id="main-container">
 
-			<div class="row" ng-repeat="row in game.board">
-			<!-- {{ row }} -->
-<!-- 	 			<div class='cell' ng-repeat="cell in row">
-					{{ cell.s }}
-				</div> -->
+			<div ng-click="cellClick($event)" class="row" ng-repeat="row in game.board" ng-class="changeColor()">
+
+			<div class="box" id="1" ng-click="fillBox($event)" data="1">
+			<div class="box" id="2" ng-click="fillBox($event)" data="2">
+			<div class="box" id="3" ng-click="fillBox($event)" data="3">
+			<div class="box" id="4" ng-click="fillBox($event)" data="4">
+			<div class="box" id="5" ng-click="fillBox($event)" data="5">	
+			<div class="box" id="6" ng-click="fillBox($event)" data="6">
+			<div class="box" id="7" ng-click="fillBox($event)" data="7">
+			<div class="box" id="8" ng-click="fillBox($event)" data="8">
+			<div class="box" id="9" ng-click="fillBox($event)" data="9">
+
 				{{row.s}}
-
-
-
 			</div>
 
 		</div>
